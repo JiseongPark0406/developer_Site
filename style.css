@@ -1,0 +1,83 @@
+/* 
+문제점:  aboutMe 부분과 clock, weather 부분을 menuBar에 나란히 서있게 하고 싶은데, 그게 잘 안딤;; -> 그리드로 해결
+근데 메뉴바에서 폰트 크기 조절이 어렵네. vw로 하면, 창 너비는 변경폭이 넓어서 폰트가 너무 크고 작아짐.
+가설: 조건문으로 작성해야할 듯. 화면비율<30% -> 최소값 지정, 30<화면<70% = vw, 70%<비율=최대값 지정
+*/
+header{
+    height: 25%;
+}
+body{
+    align-items: center;
+    text-align: center;
+    background-color: rgb(0, 0, 8);
+    color: aliceblue;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    height: 1000px;
+    font-size: 18px;
+    font-family: 'Diphylleia', serif;
+
+}
+
+div{
+    display: block;
+}
+
+#menuBar{
+    border-bottom: 0.8px rgb(253, 253, 253) solid;
+}
+#clock{
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+}
+#weather{
+    width: 200px;
+    height: 50px;
+    font-size: 13px;
+}
+
+
+.head_container{
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+}
+
+.story{
+    font-size: 15px
+}
+
+.body_container{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+
+}
+.body_item:nth-child(1){
+grid-column: 1/5;
+}
+
+.title{
+    width: 40vw;
+    text-align: left;
+    font-size: large;
+    font-weight: 1000;}
+
+.date{
+    text-align: left;
+    font-size: 13px;
+}
+
+.summary{
+    text-align: left;
+    margin-bottom: 10%;
+    font-size: 16px;
+}
+
+ul{
+    list-style:none;
+}
