@@ -5,18 +5,20 @@
 */
 header{
     height: 15%;
-    border-bottom: 0.8px rgb(253, 253, 253) solid;
+    border-bottom: 0.8px rgb(0, 0, 0) solid;
 }
 body{
-    align-items: center;
+    justify-content: center;
     text-align: center;
-    background-color: rgb(0, 0, 8);
-    color: aliceblue;
-    margin-left: 30vw;
-    margin-right: 30vw;
+    background-color: rgb(235, 235, 235);
+    color: rgb(0, 0, 0);
+    width: 40vw;
     height: 1000px;
     font-size: 18px;
     font-family: 'Diphylleia', serif;
+    display: block;
+    position: relative;
+    margin: auto;
 
 }
 
@@ -65,7 +67,8 @@ ul{
     justify-content: center;
     text-align: center;
     align-items: center; 
-    width: 80%;
+    width: 60vw;
+    /* width를 vw로 하면 전체화면일 때 남는 공간이 많음. 어느정도 넘어가면 다른 단위로 바꿔야할듯*/
     margin: auto;
 }
 
