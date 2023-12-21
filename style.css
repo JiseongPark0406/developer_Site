@@ -4,7 +4,8 @@
 가설: 조건문으로 작성해야할 듯. 화면비율<30% -> 최소값 지정, 30<화면<70% = vw, 70%<비율=최대값 지정
 */
 header{
-    height: 25%;
+    height: 15%;
+    border-bottom: 0.8px rgb(253, 253, 253) solid;
 }
 body{
     align-items: center;
@@ -23,9 +24,7 @@ div{
     display: block;
 }
 
-#menuBar{
-    border-bottom: 0.8px rgb(253, 253, 253) solid;
-}
+
 #clock{
     width: 200px;
     height: 50px;
@@ -38,41 +37,51 @@ div{
 }
 
 
-.head_container{
+.main_head_container{
     justify-content: center;
     vertical-align: middle;
     text-align: center;
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr ;
 }
-
+.head_item:nth-child(1){
+    grid-column: 1/ span 3;
+    grid-row: 1/ span 2;
+}
 .story{
-    font-size: 15px
+    font-size: 19px;
+    font-weight:bolder
 }
 
-.body_container{
+.main_body_container{
+    margin-top: 3%;
     justify-content: center;
     text-align: center;
+    align-items: center;
     display: flex;
-
 }
-.body_item:nth-child(1){
-grid-column: 1/5;
+ul{
+    justify-content: center;
+    text-align: center;
+    align-items: center; 
+    width: 80%;
+    margin: auto;
 }
 
-.title{
+
+.main_title{
     width: 40vw;
     text-align: left;
-    font-size: large;
+    font-size: 18px;
     font-weight: 1000;}
 
-.date{
+.main_date{
     text-align: left;
     font-size: 13px;
 }
 
-.summary{
+.main_summary{
     text-align: left;
     margin-bottom: 10%;
     font-size: 16px;
@@ -80,4 +89,32 @@ grid-column: 1/5;
 
 ul{
     list-style:none;
+}
+
+.theme{
+    font-size: 25px;
+    margin-top: 5%;
+    height: 30%;
+}
+
+.title{
+    width: 30vw;
+    text-align: left;
+    font-size: 45px;
+    font-weight: 1000;}
+
+.date{
+    text-align: left;
+    font-size: 13px;
+    margin: 10px;
+}
+
+.summary{
+    text-align: left;
+    margin-bottom: 10%;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.post_header{
+    height: 200px;
 }

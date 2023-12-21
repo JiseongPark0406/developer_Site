@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Diphylleia&family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div id="menuBar" class="main_head_container">
+        <div class = "head_item story"><p>무지 <br>도서관</p></div>
+        <div class="head_item"></div>
+        <div class="head_item"></div>
+        <div class="head_item"></div>
+        <div class ="head_item">
+            <h2 id = "clock" class="clock_font"> 00:00 </h2>
+            <div id = "weather" class="weather_font">
+                <span></span>
+                <span></span> </div></div>
+    </div>
+</header>
+<div class="main_body_container">
+    <ul>
+        <li id="list1">
+    <div class="main_title font"> 나는 무엇이 되고 싶은가? </div>
+    <div class="main_date font">2023-12-21</div>
+    <div class="main_summary font">진짜 뭐해먹고살지 하나도 모르겠습니다.</div>
+</li>
+<li id="list2">
+    <div class="main_title font"> 오늘 저녁은 뭘 먹지? </div>
+    <div class="main_date font">2023-12-21</div>
+    <div class="main_summary font">별로 배가 고프지도 않네.</div>
+</li>
+</ul>
+
+</div>
+
+
+
+    <script src="C:\Users\JiseongPark\OneDrive\문서\momentum\js\clock.js"></script>
+    <script src="C:\Users\JiseongPark\OneDrive\문서\momentum\js\weather.js"></script>
+    <script>
+        const list1 = document.getElementById("list1");
+        list1.onclick = open;
+        function open(){
+            location.href = "post1.html"
+        }    
+        const list2 = document.getElementById("list2");
+        list2.onclick = open;
+        function open(){
+            location.href = "post2.html"
+        }        
+    </script>
+</body>
+</html>
+
