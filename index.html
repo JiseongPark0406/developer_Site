@@ -1,3 +1,5 @@
+<!--화면 비율 반영은 아직은 무리인듯. 일단 고정시키자.-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,20 +56,26 @@
 
 
 
-
     <script src="clock.js"></script>
     <script src="weather.js"></script>
     <script>
         const list1 = document.getElementById("list1");
-        list1.onclick = open;
-        function open(){
+        list1.onclick = open1;
+        function open1(){
             location.href = "post1.html"
         }    
+        
         const list2 = document.getElementById("list2");
-        list2.onclick = open;
-        function open(){
+        list2.onclick = open2;
+        function open2(){
             location.href = "post2.html"
         }        
+        /*
+        const list3 = document.getElementById("list3");
+        list3.onclick = open3;
+        function open3(){
+            location.href = "post3.html"
+        }        */
     </script>
 </body>
 </html>
