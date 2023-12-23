@@ -3,22 +3,40 @@
 근데 메뉴바에서 폰트 크기 조절이 어렵네. vw로 하면, 창 너비는 변경폭이 넓어서 폰트가 너무 크고 작아짐.
 가설: 조건문으로 작성해야할 듯. 화면비율<30% -> 최소값 지정, 30<화면<70% = vw, 70%<비율=최대값 지정
 */
+@media (max-width: 623px) {
+    .story {
+      font-size: 10px; 
+    }
+    .head_item:nth-child(1){
+        grid-column: 1/ span 4;
+        grid-row: 1/ span 2;
+    }
+  }
+  @media (min-width: 624px) {
+    .story {
+      font-size: 19px;
+
+    }
+  }
+html{
+    justify-content: center;
+    text-align: center;
+}
 header{
-    height: 15%;
     border-bottom: 0.8px rgb(0, 0, 0) solid;
 }
 body{
-    justify-content: center;
-    text-align: center;
+
     background-color: rgb(235, 235, 235);
     color: rgb(0, 0, 0);
     width: 40vw;
-    height: 1000px;
+    height: 100%;
     font-size: 18px;
     font-family: 'Diphylleia', serif;
-    display: block;
+    display: inline-flex;
+    flex-direction: column;
     position: relative;
-    margin: auto;
+    margin-bottom: 10%;
 
 }
 
@@ -40,10 +58,7 @@ div{
 
 
 .main_head_container{
-    justify-content: center;
     vertical-align: middle;
-    text-align: center;
-    align-items: center;
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr ;
 }
@@ -52,21 +67,15 @@ div{
     grid-row: 1/ span 2;
 }
 .story{
-    font-size: 19px;
     font-weight:bolder
 }
 
 .main_body_container{
     margin-top: 3%;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
     display: flex;
 }
 ul{
-    justify-content: center;
-    text-align: center;
-    align-items: center; 
+
     width: 60vw;
     /* width를 vw로 하면 전체화면일 때 남는 공간이 많음. 어느정도 넘어가면 다른 단위로 바꿔야할듯*/
     margin: auto;
@@ -76,7 +85,7 @@ ul{
 .main_title{
     width: 40vw;
     text-align: left;
-    font-size: 18px;
+    font-size: 18;
     font-weight: 1000;}
 
 .main_date{
@@ -103,21 +112,32 @@ ul{
 .title{
     width: 30vw;
     text-align: left;
-    font-size: 45px;
+    font-size: 2vw;
     font-weight: 1000;}
 
 .date{
     text-align: left;
-    font-size: 13px;
+    font-size: 1.2vw;
     margin: 10px;
 }
 
 .summary{
     text-align: left;
     margin-bottom: 10%;
-    font-size: 22px;
+    font-size: 1.7vw;
     margin-bottom: 10px;
 }
 .post_header{
-    height: 200px;
+    height: 200px * 5vw;
 }
+
+p{
+    font-family: "Malgun Gothic";
+    text-align: justify;
+    hyphens: auto;
+    line-height: calc(1ex/0.32);
+}
+.colorscripter-code{
+    margin: 3%;
+    margin-bottom: 5%;
+    width: 100%}
