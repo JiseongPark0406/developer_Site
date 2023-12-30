@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="Size" style="background-color: black; color: white; font-size: 20px; font-weight: 900;">
+    background</div>
+<script>
+$(window).width();
+$(window).height();
+$(document).ready(function(){
+    $('.Size').height($(window).width());
+    $('.Size').height($(window).height());
+
+    $(window).resize(function(){
+        $('.Size').width($(window).width());
+        $('.Size').width($(window).height());
+    })
+})
+</script>
+</body>
+</html>

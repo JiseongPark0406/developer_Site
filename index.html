@@ -10,8 +10,9 @@
     
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Diphylleia&family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Diphylleia&family=Jua&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -29,15 +30,40 @@
                 <span></span> </div></div>
     </div>
 </header>
+<aside class="side-bar">
+
+    <section class="side-bar__icon-box">
+      <section class="side-bar__icon-1">
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+    </section>
+    <ul class="side-bar-First">
+        <li id="developStudy" class="side-bar-List">
+          <a href="#"> 개발 공부</a>
+
+        </li>
+        <li id="diary" class="side-bar-List">
+          <a href="#">일기</a>
+
+        </li>
+        <li id="study" class="side-bar-List">
+          <a href="#">정리</a>
+
+          </ul>
+
+    </aside>
+    
 <div class="main_body_container">
-    <ul>
-        <li id="list2">
+    <ul id="main_body_lists">
+        <li id="list2" class="develop_study list">
             <div class="main_title font"> Nomad Coder - React.js 1일차 </div>
             <div class="main_date font">2023-12-22</div>
             <div class="main_summary font">How can I make interactive js?</div>
         </li>
 
-        <li id="list1">
+        <li id="list1" class="diary list">
     <div class="main_title font"> 첫 포트폴리오 사이트? </div>
     <div class="main_date font">2023-12-21</div>
     <div class="main_summary font">프론트엔드 디벨로퍼로서 처음 만들어본 사이트.</div>
@@ -59,7 +85,7 @@
     <script src="clock.js"></script>
     <script src="weather.js"></script>
     <script>
-        const list1 = document.getElementById("list1");
+        const list1 = document.getElementsByName("list1");
         list1.onclick = open1;
         function open1(){
             location.href = "post1.html"
@@ -76,6 +102,37 @@
         function open3(){
             location.href = "post3.html"
         }        */
+
+        const develop_Study = document.querySelectorAll(".develop_study");
+        const diary = document.querySelectorAll(".diary");
+        const list = document.querySelectorAll(".list"); 
+
+        function hiddenAll(){
+            list.forEach(function hidenPlus(item) {item.style.display = "none"});
+        }
+        function Diary(){
+            hiddenAll();
+            diary.forEach(function diarySelect (item) {item.style.display = "block"})
+        }
+        function Develop_Study(){
+            hiddenAll();
+            develop_Study.forEach(function developStudySelect (item) {item.style.display = "block"})
+        }
+
+        const developStudyTag = document.getElementById("developStudy");
+        const diaryTag= document.getElementById("diary");
+        const title = document.querySelector(".story");
+        developStudyTag.onclick = Develop_Study;
+        diaryTag.onclick = Diary;
+
+        
+        title.onclick = home;
+
+        function home(){
+            list.forEach(function backHome(item){item.style.display = "block"})
+        }
+
+
     </script>
 </body>
 </html>
