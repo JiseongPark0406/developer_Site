@@ -44,14 +44,14 @@
           <a href="#"> 개발 공부</a>
 
         </li>
+        <li id="diary" class="side-bar-List">
+          <a href="#">일기</a>
 
+        </li>
         <li id="study" class="side-bar-List">
           <a href="#">정리</a>
-          </ul>
 
-          <form>
-          <input>
-        </form>
+          </ul>
 
     </aside>
     
@@ -62,6 +62,11 @@
             <div class="main_date font">2023-12-22</div>
             <div class="main_summary font">How can I make interactive js?</div>
         </li>
+
+        <li id="list1" class="diary list">
+    <div class="main_title font"> 첫 포트폴리오 사이트? </div>
+    <div class="main_date font">2023-12-21</div>
+    <div class="main_summary font">프론트엔드 디벨로퍼로서 처음 만들어본 사이트.</div>
 </li>
 
 
@@ -99,21 +104,26 @@
         }        */
 
         const develop_Study = document.querySelectorAll(".develop_study");
+        const diary = document.querySelectorAll(".diary");
         const list = document.querySelectorAll(".list"); 
 
         function hiddenAll(){
             list.forEach(function hidenPlus(item) {item.style.display = "none"});
         }
-
+        function Diary(){
+            hiddenAll();
+            diary.forEach(function diarySelect (item) {item.style.display = "block"})
+        }
         function Develop_Study(){
             hiddenAll();
             develop_Study.forEach(function developStudySelect (item) {item.style.display = "block"})
         }
 
         const developStudyTag = document.getElementById("developStudy");
+        const diaryTag= document.getElementById("diary");
         const title = document.querySelector(".story");
         developStudyTag.onclick = Develop_Study;
-  
+        diaryTag.onclick = Diary;
 
         
         title.onclick = home;
@@ -122,19 +132,7 @@
             list.forEach(function backHome(item){item.style.display = "block"})
         }
 
-        const pass = "diary";
-        const form = document.querySelector("form")
-        const input = document.querySelector("input");
 
-        form.addEventListener("submit", onLogInSubmit);
-        function onLogInSubmit(event){
-        event.preventDefault();
-
-        if(input.value === pass){
-            location.href ="admin.html"
-        }
-
-};
     </script>
 </body>
 </html>

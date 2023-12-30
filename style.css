@@ -307,3 +307,8 @@ p{
   .hidden{
     display: hidden;
   }
+
+  input{
+    background-color: #000000;
+    border: none;
+  }
